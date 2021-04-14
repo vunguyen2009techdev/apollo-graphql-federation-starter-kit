@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>Hello world</p>
+  <button id="addElement" onclick="addElement()">
+    add
+  </button>
+
+  <div id="list"></div>
+
+  <script>
+    let elements = [];
+    const list = document.getElementById('list');
+
+    function addElement() {
+      console.log("here adding");
+      // elements = []
+      list.innerHTML = "";
+
+      const divElement = document.createElement('div');
+      const element = document.createTextNode(`adding element ${elements.length}`);
+
+      divElement.appendChild(element);
+
+      list.appendChild(divElement);
+      elements.push(divElement);
+    }
+
+    // document.getElementById('addElement').onClick = addElement;
+  </script>
+</body>
+</html>
